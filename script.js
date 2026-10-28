@@ -1,123 +1,205 @@
-// --- INITIAL DATA (Resep Bawaan) ---
+// --- INITIAL DATA (Resep Kuliner Jepang dengan Gambar Lokal) ---
 const initialRecipes = [
     {
-        id: "rendang-padang",
-        title: "Rendang Daging Sapi",
-        region: "Padang, Sumatera Barat",
+        id: "shoyu-ramen",
+        title: "Authentic Shoyu Ramen",
+        region: "Tokyo, Jepang",
         category: "Makanan Utama",
-        time: 180,
-        difficulty: "Rumit",
-        servings: 4,
-        image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80",
-        description: "Masakan daging bercita rasa pedas khas Minangkabau yang dimasak perlahan dengan santan dan rempah-rempah.",
-        ingredients: [
-            "500 gram daging sapi paha",
-            "1000 ml santan kental",
-            "2 lembar daun kunyit",
-            "4 lembar daun jeruk",
-            "2 batang serai (memarkan)",
-            "3 cm lengkuas (memarkan)",
-            "10 siung bawang merah",
-            "6 siung bawang putih",
-            "100 gram cabai merah keriting"
-        ],
-        steps: [
-            "Haluskan bawang merah, bawang putih, cabai merah, dan lengkuas.",
-            "Panaskan sedikit minyak, tumis bumbu halus bersama serai, daun jeruk, dan daun kunyit hingga harum.",
-            "Masukkan potong daging sapi, aduk rata hingga berubah warna.",
-            "Tuangkan santan kental, aduk terus menerus agar santan tidak pecah.",
-            "Masak dengan api kecil hingga air menyusut dan minyak keluar.",
-            "Lanjutkan memasak sambil diaduk sesekali hingga warna menjadi cokelat gelap kehitaman."
-        ]
-    },
-    {
-        id: "soto-ayam",
-        title: "Soto Ayam Lamongan",
-        region: "Lamongan, Jawa Timur",
-        category: "Sup & Soto",
-        time: 60,
-        difficulty: "Sedang",
-        servings: 4,
-        image: "https://images.unsplash.com/photo-1572656631137-7935297eff55?auto=format&fit=crop&w=800&q=80",
-        description: "Soto kuning gurih berkuah kaya rempah dengan taburan bubuk koya renyah yang khas.",
-        ingredients: [
-            "500 gram dada ayam",
-            "2000 ml air",
-            "3 batang serai",
-            "5 lembar daun jeruk",
-            "8 siung bawang merah",
-            "5 siung bawang putih",
-            "4 butir kemiri sangrai",
-            "3 cm kunyit bakar",
-            "100 gram soun (seduh air hangat)",
-            "2 batang daun bawang (iris)"
-        ],
-        steps: [
-            "Rebus ayam dengan air hingga empuk. Angkat ayam, tiriskan lalu suwir-suwir.",
-            "Haluskan bawang merah, bawang putih, kemiri, dan kunyit.",
-            "Tumis bumbu halus bersama serai dan daun jeruk hingga harum.",
-            "Masukkan tumisan bumbu ke dalam air kaldu rebusan ayam.",
-            "Tambahkan garam, gula, dan merica. Masak hingga mendidih.",
-            "Tata soun dan ayam suwir di mangkuk, siram dengan kuah panas. Sajikan dengan koya."
-        ]
-    },
-    {
-        id: "sate-maranggi",
-        title: "Sate Maranggi Purwakarta",
-        region: "Purwakarta, Jawa Barat",
-        category: "Sate & Bakar",
         time: 45,
         difficulty: "Sedang",
-        servings: 4,
-        image: "https://images.unsplash.com/photo-1529563021893-cc83c1822830?auto=format&fit=crop&w=800&q=80",
-        description: "Sate daging sapi berbalut bumbu rempah manis gurih yang meresap sempurna hingga ke dalam.",
+        servings: 2,
+        image: "ramen.jpg",
+        description: "Ramen hangat berkuah kaldu shoyu yang gurih disempurnakan dengan mie kenyal, chashu, dan telur ajitsuke.",
         ingredients: [
-            "500 gram daging sapi khas dalam",
-            "5 siung bawang putih",
-            "8 siung bawang merah",
-            "2 sendok makan ketumbar sangrai",
-            "2 sendok makan air asam jawa",
-            "3 sendok makan kecap manis",
-            "1 sendok makan gula merah sisir",
-            "1 sendok teh garam"
+            "2 porsi mie ramen segar",
+            "800 ml kaldu ayam/dashi",
+            "4 sendok makan kecap asin Jepang (shoyu)",
+            "2 siung bawang putih (haluskan)",
+            "1 ruas jahe (iris tipis)",
+            "2 buah telur rebus setengah matang (ajitsuke tamago)",
+            "2 lembar nori",
+            "Daun bawang secukupnya (iris tipis)"
         ],
         steps: [
-            "Potong daging sapi bentuk dadu ukuran 2 cm.",
-            "Haluskan bawang merah, bawang putih, dan ketumbar.",
-            "Campurkan bumbu halus dengan kecap manis, air asam jawa, gula merah, dan garam.",
-            "Marinasi daging dengan bumbu selama minimal 30 menit.",
-            "Tusuk daging pada tusuk sate.",
-            "Bakar sate di atas arang sambil diolesi sisa bumbu hingga matang beraroma harum."
+            "Rebus kaldu ayam bersama bawang putih, jahe, dan shoyu hingga mendidih dan harum.",
+            "Di panci terpisah, rebus mie ramen selama 2-3 menit hingga tingkat kematangan kenyal (al dente).",
+            "Tiriskan mie dan masukkan ke dalam mangkuk saji yang sudah diberi sedikit minyak bumbu.",
+            "Siram dengan kuah kaldu panas yang kaya rasa.",
+            "Tata chashu, telur setengah matang, nori, dan irisan daun bawang di atasnya. Sajikan selagi hangat."
         ]
     },
     {
-        id: "es-pisang-ijo",
-        title: "Es Pisang Ijo",
-        region: "Makassar, Sulawesi Selatan",
-        category: "Dessert & Minuman",
-        time: 40,
-        difficulty: "Mudah",
-        servings: 4,
-        image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
-        description: "Dessert segar berupa pisang terbungkus adonan hijau, disajikan dengan bubur sumsum dan sirup DHT.",
+        id: "salmon-sushi-roll",
+        title: "Salmon Nigiri & Roll Sushi",
+        region: "Osaka, Jepang",
+        category: "Makanan Utama",
+        time: 50,
+        difficulty: "Rumit",
+        servings: 3,
+        image: "sushi.jpg",
+        description: "Sushi gulung segar dengan potongan daging ikan salmon pilihan dan nasi berbalut cuka beras khas Jepang.",
         ingredients: [
-            "4 buah pisang raja matang",
-            "150 gram tepung beras",
-            "50 gram tepung terigu",
-            "500 ml santan encer",
-            "50 ml air daun pandan / suji",
-            "500 ml santan kental (untuk bubur sumsum)",
-            "50 gram tepung beras (untuk bubur sumsum)",
-            "Sirup cocopandan / DHT secukupnya",
-            "Es batu serut secukupnya"
+            "300 gram beras Jepang (koshihikari)",
+            "4 sendok makan cuka beras (rice vinegar)",
+            "200 gram salmon segar sashimi grade",
+            "2 buah alpukat (iris tipis)",
+            "Lembar nori rumput laut secukupnya",
+            "Wasabi dan kecap asin (shoyu) pelengkap"
         ],
         steps: [
-            "Kukus pisang raja hingga matang, kupas dan sisihkan.",
-            "Campur tepung beras, terigu, santan encer, dan air pandan. Masak dengan api kecil hingga menggumpal dan matang.",
-            "Bungkus tiap pisang dengan adonan hijau hingga tertutup rata.",
-            "Kukus kembali pisang ijo selama 15 menit.",
-            "Buat bubur sumsum: campur santan kental dan tepung beras, masak sambil diaduk hingga mengental halus.",
-            "Sajikan potongan pisang ijo di atas bubur sumsum, beri es serut dan sirup merah."
+            "Cuci bersih beras Jepang, lalu masak dengan takaran air pas hingga pulen.",
+            "Selagi hangat, campurkan cuka beras dan aduk perlahan secara merata, lalu biarkan dingin.",
+            "Ambil selembar nori di atas tikar penggulung (makisu), ratakan nasi di atasnya.",
+            "Berikan irisan salmon dan alpukat di bagian tengah.",
+            "Gulung dengan padat, lalu potong-potong menggunakan pisau tajam yang dibasahi air.",
+            "Sajikan bersama wasabi dan shoyu."
+        ]
+    },
+    {
+        id: "osaka-takoyaki",
+        title: "Takoyaki Klasik Osaka",
+        region: "Osaka, Jepang",
+        category: "Street Food",
+        time: 30,
+        difficulty: "Sedang",
+        servings: 4,
+        image: "takoyaki.jpg",
+        description: "Camilan berbentuk bola-bola kecil berisi potongan gurita kenyal dengan saus takoyaki manis gurih dan katsuobushi.",
+        ingredients: [
+            "200 gram tepung terigu",
+            "1 butir telur",
+            "500 ml kaldu dashi dingin",
+            "100 gram daging gurita (rebus dan potong dadu)",
+            "Daun bawang dan tenkasu (remah tempura) secukupnya",
+            "Saus takoyaki, mayonnaise, dan katsuobushi (serutan ikan cakalang)"
+        ],
+        steps: [
+            "Campurkan tepung terigu, telur, dan kaldu dashi aduk hingga menjadi adonan cair halus.",
+            "Panaskan cetakan takoyaki dan olesi dengan minyak tipis-tipis.",
+            "Tuang adonan ke dalam lubang cetakan hingga penuh meluber.",
+            "Masukkan potongan gurita, taburi daun bawang dan tenkasu.",
+            "Balikkan adonan secara perlahan menggunakan tusuk sate hingga membentuk bola sempurna dan matang kecokelatan.",
+            "Sajikan dengan olesan saus takoyaki, mayonnaise, dan taburan katsuobushi."
+        ]
+    },
+    {
+        id: "kitsune-udon",
+        title: "Kitsune Udon",
+        region: "Kyoto, Jepang",
+        category: "Sup & Soto",
+        time: 25,
+        difficulty: "Mudah",
+        servings: 2,
+        image: "udon.jpg",
+        description: "Mie udon tebal yang kenyal disajikan dalam kuah dashi bening hangat dengan topping abura-age (kulit tahu manis).",
+        ingredients: [
+            "2 bungkus mie udon siap pakai",
+            "600 ml dashi kaldu ikan",
+            "2 sendok makan kecap asin jepang",
+            "2 lembar abura-age (kulit tahu Jepang manis)",
+            "Kamaboko (fish cake Jepang) secukupnya",
+            "Daun bawang iris"
+        ],
+        steps: [
+            "Rebus mie udon sebentar di air mendidih, lalu tiriskan.",
+            "Panaskan kaldu dashi bersama kecap asin hingga mendidih ringan.",
+            "Rebus sebentar kulit tahu (abura-age) di kuah manis terpisah jika belum berbumbu.",
+            "Tata udon di mangkuk, tuang kuah dashi panas.",
+            "Letakkan abura-age, kamaboko, dan taburan daun bawang di atasnya."
+        ]
+    },
+    {
+        id: "matcha-latte",
+        title: "Uji Matcha Latte",
+        region: "Kyoto, Jepang",
+        category: "Dessert & Minuman",
+        time: 10,
+        difficulty: "Mudah",
+        servings: 1,
+        image: "matcha.jpg",
+        description: "Minuman teh hijau Jepang premium yang kaya antioksidan berpadu dengan kelembutan susu segar.",
+        ingredients: [
+            "2 sendok teh bubuk matcha berkualitas",
+            "30 ml air hangat",
+            "200 ml susu cair segar",
+            "1 sendok makan sirup gula / madu",
+            "Es batu secukupnya"
+        ],
+        steps: [
+            "Seduh bubuk matcha dengan air hangat, lalu kocok menggunakan chasen (pengocok bambu) hingga berbusa halus.",
+            "Siapkan gelas berisi es batu dan tuangkan susu cair segar.",
+            "Tuang cairan matcha secara perlahan di atas susu untuk memberikan efek gradasi warna yang cantik.",
+            "Aduk rata sebelum dinikmati."
+        ]
+    },
+    {
+        id: "hojicha-latte",
+        title: "Roasted Hojicha Latte",
+        region: "Kyoto, Jepang",
+        category: "Dessert & Minuman",
+        time: 10,
+        difficulty: "Mudah",
+        servings: 1,
+        image: "hojicha.jpg",
+        description: "Teh hijau hijau panggang khas Jepang yang memberikan aroma smokey unik berpadu susu creamy.",
+        ingredients: [
+            "2 sendok teh bubuk hojicha",
+            "40 ml air panas",
+            "200 ml susu segar",
+            "Pemanis sesuai selera"
+        ],
+        steps: [
+            "Larutkan bubuk hojicha dengan air panas hingga tidak menggumpal.",
+            "Panaskan atau dinginkan susu sesuai selera (bisa disajikan panas atau es).",
+            "Campurkan larutan hojicha dengan susu dan pemanis.",
+            "Aduk merata dan siap disajikan."
+        ]
+    },
+    {
+        id: "mugicha-tea",
+        title: "Mugicha (Japanese Barley Tea)",
+        region: "Tokyo, Jepang",
+        category: "Dessert & Minuman",
+        time: 15,
+        difficulty: "Mudah",
+        servings: 4,
+        image: "mugicha.jpg",
+        description: "Teh jelai panggang dingin yang sangat menyegarkan dan bebas kafein, populer diminum saat musim panas di Jepang.",
+        ingredients: [
+            "4 sendok makan biji/teh barley panggang (mugicha)",
+            "1000 ml air",
+            "Es batu secukupnya"
+        ],
+        steps: [
+            "Didihkan air di dalam panci.",
+            "Masukkan teh barley panggang, lalu kecilkan api dan rebus selama 5-10 menit.",
+            "Matikan api dan diamkan hingga suhu ruang, lalu saring.",
+            "Simpan di dalam kulkas dan sajikan dingin dengan es batu."
+        ]
+    },
+    {
+        id: "miso-soup",
+        title: "Traditional Sup Miso",
+        region: "Tokyo, Jepang",
+        category: "Sup & Soto",
+        time: 15,
+        difficulty: "Mudah",
+        servings: 3,
+        image: "sup-miso.jpg",
+        description: "Sup tradisional Jepang berbasis kaldu dashi dengan pasta kedelai fermentasi (miso), tofu lembut, dan rumput laut wakame.",
+        ingredients: [
+            "600 ml kaldu dashi",
+            "3 sendok makan pasta miso",
+            "1 kotak tahu silken (potong dadu kecil)",
+            "2 sendok makan rumput laut wakame kering (rendam air)",
+            "1 batang daun bawang (iris halus)"
+        ],
+        steps: [
+            "Didihkan kaldu dashi di dalam panci.",
+            "Masukkan rumput laut wakame dan potongan tahu silken.",
+            "Ambil sedikit kuah panas ke mangkuk kecil, larutkan pasta miso di dalamnya agar tidak menggumpal.",
+            "Kecilkan api kompor sekecil mungkin, lalu tuang larutan miso ke dalam panci utama (jangan sampai mendidih setelah miso masuk agar nutrisinya terjaga).",
+            "Taburkan irisan daun bawang sesaat sebelum disajikan."
         ]
     }
 ];
@@ -126,7 +208,7 @@ const initialRecipes = [
 let recipes = [];
 let activeCategory = "All";
 let favorites = [];
-let currentServings = 4;
+let currentServings = 2;
 let timerInterval = null;
 let timerSeconds = 0;
 
@@ -140,18 +222,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load recipes from LocalStorage or Fallback
 function loadRecipes() {
-    const stored = localStorage.getItem('kn_recipes');
+    const stored = localStorage.getItem('zen_recipes');
     if (stored) {
         recipes = JSON.parse(stored);
     } else {
         recipes = initialRecipes;
-        localStorage.setItem('kn_recipes', JSON.stringify(recipes));
+        localStorage.setItem('zen_recipes', JSON.stringify(recipes));
     }
 }
 
 // Load favorites
 function loadFavorites() {
-    const stored = localStorage.getItem('kn_favorites');
+    const stored = localStorage.getItem('zen_favorites');
     favorites = stored ? JSON.parse(stored) : [];
     updateFavBadge();
 }
@@ -169,12 +251,10 @@ function toggleFavorite(id, event) {
     } else {
         favorites.splice(index, 1);
     }
-    localStorage.setItem('kn_favorites', JSON.stringify(favorites));
+    localStorage.setItem('zen_favorites', JSON.stringify(favorites));
     updateFavBadge();
     
-    // Re-render based on current view
     if (document.getElementById('homeView').classList.contains('hidden')) {
-        // If in detail view, update state UI
         const btn = document.getElementById(`favBtn-${id}`);
         if(btn) {
             const isFav = favorites.includes(id);
@@ -221,12 +301,12 @@ function renderRecipes() {
 
     if (activeCategory === 'FAVORITES') {
         filtered = filtered.filter(r => favorites.includes(r.id));
-        sectionTitle.innerText = "Resep Favorit Saya";
+        sectionTitle.innerText = "Menu Favorit Saya";
     } else if (activeCategory !== 'All') {
         filtered = filtered.filter(r => r.category === activeCategory);
         sectionTitle.innerText = `Kategori: ${activeCategory}`;
     } else {
-        sectionTitle.innerText = "Daftar Resep";
+        sectionTitle.innerText = "Daftar Menu Jepang";
     }
 
     if (searchVal) {
@@ -307,7 +387,6 @@ function showDetail(id) {
     const container = document.getElementById('detailContent');
     container.innerHTML = `
         <div class="bg-white rounded-3xl overflow-hidden border border-amber-100 shadow-lg">
-            <!-- Header Image -->
             <div class="relative h-72 md:h-96 w-full bg-slate-900">
                 <img src="${recipe.image}" class="w-full h-full object-cover opacity-90">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
@@ -325,13 +404,8 @@ function showDetail(id) {
                 </button>
             </div>
 
-            <!-- Content Grid -->
             <div class="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
-                
-                <!-- Left Column: Ingredients & Servings -->
                 <div class="lg:col-span-1 space-y-6">
-                    
-                    <!-- Quick Info Stats -->
                     <div class="grid grid-cols-3 gap-3 bg-amber-50/50 p-4 rounded-2xl border border-amber-100 text-center">
                         <div>
                             <p class="text-[11px] text-slate-400 uppercase font-semibold">Waktu</p>
@@ -342,12 +416,11 @@ function showDetail(id) {
                             <p class="text-sm font-bold text-slate-800 mt-0.5">${recipe.difficulty}</p>
                         </div>
                         <div>
-                            <p class="text-[11px] text-slate-400 uppercase font-semibold">Porsi Dasar</p>
+                            <p class="text-[11px] text-slate-400 uppercase font-semibold">Porsi</p>
                             <p class="text-sm font-bold text-slate-800 mt-0.5">${recipe.servings} orang</p>
                         </div>
                     </div>
 
-                    <!-- Dynamic Servings Calculator -->
                     <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
@@ -361,17 +434,16 @@ function showDetail(id) {
                             </div>
                         </div>
 
-                        <h4 class="font-semibold text-xs uppercase tracking-wider text-slate-400 mb-3">Bahan-Bahan Needed</h4>
+                        <h4 class="font-semibold text-xs uppercase tracking-wider text-slate-400 mb-3">Daftar Bahan</h4>
                         <ul id="ingredientsList" class="space-y-2.5 text-sm">
                             ${generateIngredientsList(recipe.ingredients, recipe.servings, recipe.servings)}
                         </ul>
                     </div>
 
-                    <!-- Kitchen Cooking Timer Widget -->
                     <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-md">
                         <h3 class="font-bold text-sm mb-3 flex items-center gap-2 text-amber-400">
                             <i class="fa-solid fa-stopwatch"></i>
-                            Cooking Timer Assitant
+                            Cooking Timer Assistant
                         </h3>
                         <div class="text-center py-2">
                             <div id="timerDisplay" class="text-4xl font-mono font-bold tracking-wider mb-3">00:00</div>
@@ -383,20 +455,18 @@ function showDetail(id) {
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <!-- Right Column: Instructions -->
                 <div class="lg:col-span-2 space-y-6">
                     <div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Tentang Hidangan</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Tentang Menu</h3>
                         <p class="text-slate-600 text-sm leading-relaxed">${recipe.description}</p>
                     </div>
 
                     <div>
                         <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center justify-between">
                             <span>Langkah-Langkah Memasak</span>
-                            <span class="text-xs font-normal text-slate-400">Tandai langkah yang selesai</span>
+                            <span class="text-xs font-normal text-slate-400">Tandai langkah selesai</span>
                         </h3>
                         <div class="space-y-4">
                             ${recipe.steps.map((step, idx) => `
@@ -412,7 +482,6 @@ function showDetail(id) {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     `;
@@ -422,11 +491,9 @@ function showDetail(id) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Calculate ingredients dynamically
 function generateIngredientsList(ingredients, baseServings, targetServings) {
     const ratio = targetServings / baseServings;
     return ingredients.map(ing => {
-        // Regex to parse number at start
         const match = ing.match(/^(\d+(?:\.\d+)?)\s*(.*)/);
         if (match) {
             const num = parseFloat(match[1]);
@@ -453,7 +520,6 @@ function updateServings(baseServings, change) {
     currentServings += change;
     document.getElementById('servingsDisplay').innerText = currentServings;
     
-    // Refresh current detail ingredients
     const activeRecipeId = document.getElementById('detailContent').querySelector('[id^="favBtn-"]').id.replace('favBtn-', '');
     const recipe = recipes.find(r => r.id === activeRecipeId);
     if(recipe) {
@@ -467,7 +533,6 @@ function toggleStep(el) {
     el.classList.toggle('border-emerald-200');
 }
 
-// --- COOKING TIMER FUNCTIONS ---
 function startTimer(minutes) {
     timerSeconds += minutes * 60;
     updateTimerDisplay();
@@ -500,7 +565,6 @@ function updateTimerDisplay() {
     if (display) display.innerText = `${m}:${s}`;
 }
 
-// --- ADD NEW RECIPE MODAL ---
 function openAddModal() {
     document.getElementById('addModal').classList.remove('hidden');
 }
@@ -533,13 +597,13 @@ function saveNewRecipe(e) {
         difficulty,
         servings,
         image,
-        description: `Resep rumahan ${title} khas ${region} yang lezat dan praktis.`,
+        description: `Resep kuliner ${title} khas ${region} yang lezat dan praktis dibuat di rumah.`,
         ingredients,
         steps
     };
 
     recipes.unshift(newRecipe);
-    localStorage.setItem('kn_recipes', JSON.stringify(recipes));
+    localStorage.setItem('zen_recipes', JSON.stringify(recipes));
     
     renderCategories();
     renderRecipes();
