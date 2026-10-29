@@ -1,5 +1,5 @@
 /**
- * RESTORAN JEPANG ZEZUYA - JAVASCRIPT LOGIC
+ * RESTORAN JEPANG Teien Dining 庭園 ダイニング  - JAVASCRIPT LOGIC
  * Interaktivitas Navigasi, Filter Menu, Modal Pesanan, & Pengiriman ke WhatsApp 085770838109
  */
 
@@ -17,7 +17,7 @@ const menuData = [
         id: "shoyu-ramen",
         name: "Authentic Shoyu Ramen",
         category: "makanan",
-        price: 65000,
+        price: 38000,
         img: "ramen.jpg",
         desc: "Ramen hangat berkuah kaldu shoyu kaya rempah, disajikan dengan mie kenyal, chashu, dan telur ajitsuke.",
         time: 25,
@@ -28,7 +28,7 @@ const menuData = [
         id: "salmon-sushi",
         name: "Salmon Nigiri & Roll",
         category: "makanan",
-        price: 85000,
+        price: 42000,
         img: "sushi.jpg",
         desc: "Sushi gulung segar dengan irisan daging ikan salmon pilihan berkualitas tinggi dan nasi berbalut cuka beras khas.",
         time: 30,
@@ -39,7 +39,7 @@ const menuData = [
         id: "osaka-takoyaki",
         name: "Osaka Takoyaki Original",
         category: "makanan",
-        price: 40000,
+        price: 31000,
         img: "takoyaki.jpg",
         desc: "Bola-bola jajanan khas Jepang berisi potongan gurita kenyal, disiram saus takoyaki spesial dan katsuobushi.",
         time: 20,
@@ -50,7 +50,7 @@ const menuData = [
         id: "kitsune-udon",
         name: "Kitsune Udon Kuah Dashi",
         category: "makanan",
-        price: 55000,
+        price: 45000,
         img: "udon.jpg",
         desc: "Mie udon tebal yang kenyal dalam kehangatan kuah kaldu dashi bening dengan topping kulit tahu manis (abura-age).",
         time: 20,
@@ -72,7 +72,7 @@ const menuData = [
         id: "matcha-latte",
         name: "Uji Matcha Latte",
         category: "minuman",
-        price: 35000,
+        price: 20000,
         img: "matcha.jpg",
         desc: "Minuman teh hijau matcha premium asal Uji, Kyoto, berpadu lembut dengan kecreman susu segar pilihan.",
         time: 10,
@@ -83,7 +83,7 @@ const menuData = [
         id: "hojicha-latte",
         name: "Roasted Hojicha Latte",
         category: "minuman",
-        price: 35000,
+        price: 18000,
         img: "hojicha.jpg",
         desc: "Teh hijau panggang khas Jepang yang memberikan aroma smokey unik dan menenangkan berpadu susu creamy.",
         time: 10,
@@ -94,7 +94,7 @@ const menuData = [
         id: "mugicha-tea",
         name: "Mugicha (Japanese Barley Tea)",
         category: "minuman",
-        price: 20000,
+        price: 15000,
         img: "mugicha.jpg",
         desc: "Teh jelai panggang dingin yang sangat menyegarkan dan bebas kafein, sangat pas dinikmati kapan saja.",
         time: 5,
@@ -266,7 +266,7 @@ function changeModalQty(change) {
 
 function sendOrderViaWhatsApp() {
   const total = currentProduct.price * currentProduct.qty;
-  const message = `Halo Restoran Jepang Zezuya, saya ingin memesan:\n` +
+  const message = `Halo Restoran Jepang Teien Dining 庭園 ダイニング , saya ingin memesan:\n` +
                   `- Menu: *${currentProduct.name}*\n` +
                   `- Jumlah: *${currentProduct.qty} porsi*\n` +
                   `- Total: *${formatRupiah(total)}*\n\n` +
