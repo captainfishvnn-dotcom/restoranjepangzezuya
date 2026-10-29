@@ -1,6 +1,6 @@
 /**
- * TEIEN DINING 庭園 ダイニング - JAVASCRIPT LOGIC
- * Interaktivitas Navigasi, Filter Menu, Modal Pesanan, & Pengiriman ke WhatsApp
+ * RESTORAN JEPANG ZEZUYA - JAVASCRIPT LOGIC
+ * Interaktivitas Navigasi, Filter Menu, Modal Pesanan, & Pengiriman ke WhatsApp 085770838109
  */
 
 // State Variabel Modal Pesanan
@@ -11,81 +11,92 @@ let currentProduct = {
   img: ''
 };
 
-// Data Menu Sesuai Persis Nama File Gambar Lokal di Repository Anda
+// Data Menu Kuliner Jepang Sesuai Persis Nama File Gambar Lokal di Repository Anda[cite: 1]
 const menuData = [
     {
-        id: "tenderloin-steak",
-        name: "Teien Special Tenderloin Steak",
+        id: "shoyu-ramen",
+        name: "Authentic Shoyu Ramen",
         category: "makanan",
-        price: 185000,
-        img: "Tenderloinsteak.jpg",
-        desc: "Daging sapi tenderloin pilihan dengan tingkat kematangan sempurna, disajikan dengan saus jamur khas Teien Dining.",
-        time: 35,
-        difficulty: "Sedang",
-        servings: 1
-    },
-    {
-        id: "chicken-steak",
-        name: "Crispy Teien Chicken Steak",
-        category: "makanan",
-        price: 75000,
-        img: "chiken.jpg",
-        desc: "Filet dada ayam goreng tepung renyah di luar, juicy di dalam, disajikan dengan kentang goreng dan saus blackpepper.",
+        price: 65000,
+        img: "ramen.jpg",
+        desc: "Ramen hangat berkuah kaldu shoyu kaya rempah, disajikan dengan mie kenyal, chashu, dan telur ajitsuke.",
         time: 25,
-        difficulty: "Mudah",
-        servings: 1
-    },
-    {
-        id: "signature-steak",
-        name: "Teien Signature Steak",
-        category: "makanan",
-        price: 160000,
-        img: "steakenak.jpg",
-        desc: "Menu andalan Teien Dining dengan racikan bumbu rahasia perpaduan cita rasa oriental dan western yang lezat.",
-        time: 30,
         difficulty: "Sedang",
         servings: 1
     },
     {
-        id: "us-ribeye-steak",
-        name: "US Prime Ribeye Steak",
+        id: "salmon-sushi",
+        name: "Salmon Nigiri & Roll",
         category: "makanan",
-        price: 210000,
-        img: "usribeye.jpg",
-        desc: "Daging ribeye berkualitas tinggi dengan marbling sempurna yang memberikan kelembutan dan kelezatan di tiap gigitan.",
-        time: 40,
+        price: 85000,
+        img: "sushi.jpg",
+        desc: "Sushi gulung segar dengan irisan daging ikan salmon pilihan berkualitas tinggi dan nasi berbalut cuka beras khas.",
+        time: 30,
         difficulty: "Rumit",
         servings: 1
     },
     {
-        id: "creamy-spaghetti",
-        name: "Teien Creamy Beef Spaghetti",
+        id: "osaka-takoyaki",
+        name: "Osaka Takoyaki Original",
         category: "makanan",
-        price: 85000,
-        img: "spaghetti.jpg",
-        desc: "Pasta spaghetti al dente berbalut saus krim keju gurih dengan potongan daging sapi asap dan taburan parsley.",
+        price: 40000,
+        img: "takoyaki.jpg",
+        desc: "Bola-bola jajanan khas Jepang berisi potongan gurita kenyal, disiram saus takoyaki spesial dan katsuobushi.",
+        time: 20,
+        difficulty: "Sedang",
+        servings: 1
+    },
+    {
+        id: "kitsune-udon",
+        name: "Kitsune Udon Kuah Dashi",
+        category: "makanan",
+        price: 55000,
+        img: "udon.jpg",
+        desc: "Mie udon tebal yang kenyal dalam kehangatan kuah kaldu dashi bening dengan topping kulit tahu manis (abura-age).",
         time: 20,
         difficulty: "Mudah",
         servings: 1
     },
     {
-        id: "es-teh-manis",
-        name: "Teien Signature Es Teh Manis",
-        category: "minuman",
-        price: 12000,
-        img: "esteh.jpg",
-        desc: "Teh pilihan beraroma melati segar disajikan dingin dengan es batu yang menyegarkan dahaga.",
-        time: 5,
+        id: "sup-miso",
+        name: "Traditional Sup Miso",
+        category: "makanan",
+        price: 25000,
+        img: "sup-miso.jpg",
+        desc: "Sup tradisional Jepang pelengkap hidangan utama berbahan dasar pasta miso fermentasi, tahu lembut, dan wakame.",
+        time: 15,
         difficulty: "Mudah",
         servings: 1
     },
     {
-        id: "ice-lemon-tea",
-        name: "Refreshing Ice Lemon Tea",
+        id: "matcha-latte",
+        name: "Uji Matcha Latte",
         category: "minuman",
-        price: 22000,
-        img: "icelemon.jpg",
-        desc: "Kombinasi teh segar dan perasan buah lemon asli pilihan yang kaya vitamin C dan menyegarkan.",
+        price: 35000,
+        img: "matcha.jpg",
+        desc: "Minuman teh hijau matcha premium asal Uji, Kyoto, berpadu lembut dengan kecreman susu segar pilihan.",
+        time: 10,
+        difficulty: "Mudah",
+        servings: 1
+    },
+    {
+        id: "hojicha-latte",
+        name: "Roasted Hojicha Latte",
+        category: "minuman",
+        price: 35000,
+        img: "hojicha.jpg",
+        desc: "Teh hijau panggang khas Jepang yang memberikan aroma smokey unik dan menenangkan berpadu susu creamy.",
+        time: 10,
+        difficulty: "Mudah",
+        servings: 1
+    },
+    {
+        id: "mugicha-tea",
+        name: "Mugicha (Japanese Barley Tea)",
+        category: "minuman",
+        price: 20000,
+        img: "mugicha.jpg",
+        desc: "Teh jelai panggang dingin yang sangat menyegarkan dan bebas kafein, sangat pas dinikmati kapan saja.",
         time: 5,
         difficulty: "Mudah",
         servings: 1
@@ -96,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMenuFilter();
   initReservationForm();
-  initScrollSpy();
   renderDynamicMenu();
 });
 
@@ -108,21 +118,21 @@ function renderDynamicMenu() {
     if (!grid) return;
 
     grid.innerHTML = menuData.map(item => `
-        <div class="menu-card bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="${item.category}">
+        <div class="menu-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="${item.category}">
             <div class="relative h-48 overflow-hidden bg-slate-100">
-                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';">
+                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80';">
                 <span class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-1 rounded-lg">
-                    <i class="fa-solid fa-utensils text-amber-400 mr-1"></i>${item.category.toUpperCase()}
+                    <i class="fa-solid fa-utensils text-rose-400 mr-1"></i>${item.category.toUpperCase()}
                 </span>
             </div>
             <div class="p-5 flex-grow flex flex-col justify-between">
                 <div>
-                    <h3 class="font-bold text-slate-900 text-lg group-hover:text-amber-600 transition-colors line-clamp-1">${item.name}</h3>
+                    <h3 class="font-bold text-slate-900 text-lg group-hover:text-rose-600 transition-colors line-clamp-1">${item.name}</h3>
                     <p class="text-slate-500 text-xs mt-1.5 line-clamp-2 font-normal">${item.desc}</p>
                 </div>
                 <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span class="font-bold text-amber-700 text-base">${formatRupiah(item.price)}</span>
-                    <button onclick="openOrderModal('${item.name}', ${item.price}, '${item.img}')" class="bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition-all shadow-sm">
+                    <span class="font-bold text-rose-600 text-base">${formatRupiah(item.price)}</span>
+                    <button onclick="openOrderModal('${item.name}', ${item.price}, '${item.img}')" class="bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold px-3.5 py-2 rounded-xl transition-all shadow-sm">
                         Pesan Menu
                     </button>
                 </div>
@@ -135,18 +145,9 @@ function renderDynamicMenu() {
    1. NAVBAR & MOBILE DRAWER LOGIC
    ========================================================================== */
 function initNavbar() {
-  const header = document.getElementById('site-header');
   const toggleBtn = document.getElementById('mobile-toggle-btn');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
 
   if (toggleBtn && navMenu) {
     toggleBtn.addEventListener('click', (e) => {
@@ -158,17 +159,6 @@ function initNavbar() {
           icon.classList.remove('fa-bars');
           icon.classList.add('fa-xmark');
         } else {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
-        }
-      }
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target) && navMenu.classList.contains('open')) {
-        navMenu.classList.remove('open');
-        const icon = toggleBtn.querySelector('i');
-        if (icon) {
           icon.classList.remove('fa-xmark');
           icon.classList.add('fa-bars');
         }
@@ -191,42 +181,20 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   2. SCROLLSPY
-   ========================================================================== */
-function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id], header[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  window.addEventListener('scroll', () => {
-    let scrollPos = window.scrollY + 120;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  });
-}
-
-/* ==========================================================================
-   3. FILTER MENU KATEGORI
+   2. FILTER MENU KATEGORI
    ========================================================================== */
 function initMenuFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'bg-rose-600', 'text-white', 'shadow-md', 'shadow-rose-200');
+        b.classList.add('bg-slate-100', 'text-slate-600');
+      });
+      
+      btn.classList.add('active', 'bg-rose-600', 'text-white', 'shadow-md', 'shadow-rose-200');
+      btn.classList.remove('bg-slate-100', 'text-slate-600');
 
       const filterValue = btn.getAttribute('data-filter');
       const menuCards = document.querySelectorAll('.menu-card');
@@ -235,7 +203,6 @@ function initMenuFilter() {
         const category = card.getAttribute('data-category');
         if (filterValue === 'all' || category === filterValue) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -245,7 +212,7 @@ function initMenuFilter() {
 }
 
 /* ==========================================================================
-   4. MODAL PESAN MENU INTERAKTIF & WHATSAPP 085770838109
+   3. MODAL PESAN MENU INTERAKTIF & WHATSAPP 085770838109
    ========================================================================== */
 function openOrderModal(name, price, img) {
   currentProduct = {
@@ -269,7 +236,7 @@ function openOrderModal(name, price, img) {
   if (totalPrice) totalPrice.textContent = formatRupiah(price);
 
   if (modal) {
-    modal.classList.add('active');
+    modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   }
 }
@@ -277,17 +244,10 @@ function openOrderModal(name, price, img) {
 function closeOrderModal() {
   const modal = document.getElementById('orderModal');
   if (modal) {
-    modal.classList.remove('active');
+    modal.classList.add('hidden');
     document.body.style.overflow = '';
   }
 }
-
-window.addEventListener('click', (e) => {
-  const modal = document.getElementById('orderModal');
-  if (e.target === modal) {
-    closeOrderModal();
-  }
-});
 
 function changeModalQty(change) {
   const qtyInput = document.getElementById('modalQtyInput');
@@ -306,13 +266,13 @@ function changeModalQty(change) {
 
 function sendOrderViaWhatsApp() {
   const total = currentProduct.price * currentProduct.qty;
-  const message = `Halo Teien Dining 庭園 ダイニング, saya ingin memesan:\n` +
+  const message = `Halo Restoran Jepang Zezuya, saya ingin memesan:\n` +
                   `- Menu: *${currentProduct.name}*\n` +
                   `- Jumlah: *${currentProduct.qty} porsi*\n` +
                   `- Total: *${formatRupiah(total)}*\n\n` +
                   `Mohon informasikan proses pemesanan & pembayarannya. Terima kasih!`;
 
-  // Nomor WhatsApp tujuan diperbarui ke 6285770838109 (Format internasional tanpa angka 0 di depan)
+  // Nomor WhatsApp tujuan: 6285770838109 (085770838109)
   const waUrl = `https://wa.me/6285770838109?text=${encodeURIComponent(message)}`;
   
   closeOrderModal();
@@ -324,7 +284,7 @@ function sendOrderViaWhatsApp() {
 }
 
 /* ==========================================================================
-   5. FORMULIR RESERVASI MEJA
+   4. FORMULIR RESERVASI MEJA
    ========================================================================== */
 function initReservationForm() {
   const form = document.getElementById('reservation-form');
@@ -363,7 +323,7 @@ function initReservationForm() {
 }
 
 /* ==========================================================================
-   6. HELPER FUNCTIONS
+   5. HELPER FUNCTIONS
    ========================================================================== */
 function formatRupiah(number) {
   return 'Rp ' + Number(number).toLocaleString('id-ID');
@@ -375,10 +335,10 @@ function showToast(message) {
 
   if (toast && toastText) {
     toastText.textContent = message;
-    toast.classList.add('show');
+    toast.classList.remove('translate-y-20', 'opacity-0');
 
     setTimeout(() => {
-      toast.classList.remove('show');
+      toast.classList.add('translate-y-20', 'opacity-0');
     }, 4500);
   }
 }
